@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  html{
+    background-color : #F4D03F;
+    font-family: 'ABeeZee', sans-serif;
+  }
+  link{
+    color : #D35400;
+  }
+  a{
+    color : #D35400;
+  }
+  h1{
+    color : #D35400;
+  }
+  </style>
+<script>
+function repeatMe(){
+  // Gets the value of the text field:
+  var val = document.getElementById('inputField').value;
+  // Writes the comment in the div with id "result":
+  document.getElementById('result').innerHTML = "Nice to see you, "+val+"!";
+}
+</script>
+
+<body>
+<a href="index.html">Back</a>
+<h1>Assignment 3: Input and output</h1>
+<p> Write something in the text field and click the button.</p>
+
+<input type="text" id="inputField">
+<button onclick="repeatMe()">Click me!</button>
+
+<p> Output:</p>
+
+<div id="result">
+
+
+</div>
+
+</body>
+
+</html>
