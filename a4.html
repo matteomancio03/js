@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css?family=ABeeZee|Cabin" rel="stylesheet">
@@ -17,30 +16,40 @@
   h1{
     color : #D35400;
   }
+  p{
+    color : #D35400
+  }
+  #inputField{
+    background-color : #F4D03F
+  }
   </style>
 <script>
 function repeatMe(){
   // Gets the value of the text field:
   var val = document.getElementById('inputField').value;
   // Writes the comment in the div with id "result":
-  document.getElementById('result').innerHTML = "Nice to see you, "+val+"!";
+  var res = "";
+  for(var i = 0; i < 10; i++) {
+    res += val + "<br>"+"<br>";
+  }
+  document.getElementById('result').innerHTML = res;
 }
 </script>
 
 <body>
 <a href="index.html">Back</a>
-<h1>Assignment 3: Input and output</h1>
+<h1>Assignment 4: Multiply text</h1>
 <p> Write something in the text field and click the button.</p>
 
 <input type="text" id="inputField">
-<button onclick="repeatMe()">Click me!</button>
+<button onclick="repeatMe()">Repeat me!</button>
 
 <p> Output:</p>
 
-<div id="result">
+<p id="result">
 
 
-</div>
+</p>
 
 </body>
 
