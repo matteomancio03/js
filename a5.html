@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=ABeeZee|Cabin" rel="stylesheet">
+  <style>
+  html{
+    background-color : #F4D03F;
+    font-weight: bold;
+    font-family: 'ABeeZee', sans-serif;
+  }
+  link{
+    color : #D35400;
+  }
+  a{
+    color : #D35400;
+  }
+  h1{
+    color : #D35400;
+  }
+  p{
+    color : #D35400
+  }
+  input[type=text] {
+    border: 2px solid red;
+    border-radius: 4px;
+}
+  </style>
+  <script>
+  function multiply() {
+    var v1 = document.getElementById("snack").value;
+    var v2 = document.getElementById("eat").value;
+  var res = new Number(v1 * v2);
+  var str = new String(v1 + " * " + v2 + " = " + res);
+  document.getElementById("demo").innerHTML = str;
+}
+</script>
+</head>
+
+<body>
+<a href="index.html">Back</a>
+<h1>Assignment 5: Make an HTML page with two input elements and a button element.
+
+When you type two numbers to the input fields and push the button, the computer will give you the product of the two numbers given.
+
+Bonus: check that the given values are good. In case of a bad number (for instance, a letter) the user is given a message to correct the number.</h1>
+<input type="text" id="snack">
+  </input>
+  <input type="text" id="eat">
+    </input>
+    <button onclick="multiply()"> Multiply</button>
+    <p id="demo">
+    </p>
+</body>
+
+</html>
