@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<center>
+<head>
+  <title>Dynamic squares</title>
+  <link href="https://fonts.googleapis.com/css?family=ABeeZee|Cabin" rel="stylesheet">
+  <style>
+  html{
+    background-color : #F4D03F;
+    font-weight: bold;
+    font-family: 'ABeeZee', sans-serif;
+  }
+  link{
+    color : #D35400;
+  }
+  a{
+    color : #D35400;
+  }
+  h1{
+    color : #D35400;
+  }
+  p{
+    color : #D35400
+  }
+  input {
+    border: 4px solid #D35400;
+    border-radius: 4px;
+    background-color: #F4D03F
+  }
+</style>
+<script>
+function makeSquare(size, color){
+  var square = document.createElement("div");
+  square.style.display = "inline-block";
+  square.style.height = size + "px";
+  square.style.width = size + "px";
+  square.style.backgroundColor = color;
+  square.style.margin = "5px";
+  document.body.appendChild(square);
+}
+function addSquares() {
+  var valueNumber = document.getElementById('inputNumber').value;
+  var valueColor = document.getElementById('inputColor').value;
+  var valueSize = document.getElementById('inputSize').value;
+  if (valueNumber != "" && valueColor != "" && valueSize != "") {
+    for(var repvar = 0; repvar < valueNumber; repvar++) {
+      makeSquare(valueSize, valueColor);
+    }
+  } else {
+    msg("Some value are blank");
+  }
+}
+
+</script>
+</head>
+<body>
+  <div id="container">
+  <h3 id="gohome"><a href="../index.htm">Index</a></h3>
+  <center>
+    <h2 id="title" class="title"><a onclick="location.reload();">Assignement 6</a> : Dynamic squares</h2>
+    <h4 id="description" class="description"><span class="description-span">Description:</span> Modify the HTML page given so that it creates the squares with the features given by user.<br>You only need to implement the function addSquares. See <a href="../img/squares.png">Picture 1</a>.</h4>
+    <br>
+    <p style="font-weight:bold"> Fill in the information and click the button. </p>
+    <p>Number of squares: <input type="text" class="valueInput inputClass" id="inputNumber"></p>
+    <p>Color of squares: <input type="text" class="valueInput inputClass" id="inputColor"></p>
+    <p>Size of squares (px): <input type="text" class="valueInput inputClass" id="inputSize"></p>
+  <button class="buttonClass buttonInput" onclick="addSquares()">Add squares!</button>
+  <br>
+</center>
+<br>
+<br>
+<div id="snackBar"></div>
+<center>
+</body>
+</center>
+</html>
